@@ -1,2 +1,2 @@
-Dillon
-<h1>You are not allowed to copy this code :(<h1>
+<h1>Dillon</h1>
+<h2>You are not allowed to copy this code :(</h2>
