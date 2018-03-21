@@ -3,7 +3,7 @@
 <head>
   <title>snake</title>
  <link rel=icon" href="/favicon.ico" type="image/png"/>
- 
+ <link type="text/css" rel="stylesheet" href="./ppp.css" />
 <header>
 <h3>
 		<a class="headlink" href='/index.html'>Home</a>&nbsp;
@@ -137,16 +137,20 @@ document.addEventListener('keydown', function(e) {
   }
 });
 requestAnimationFrame(loop);
+function changeColour(colour) {
+	  document.body.style.backgroundColor = colour;
+  }
 </script>
 </body>
-<footer>  <button onclick="go('red')">red</button>
-    <button onclick="go('orange')">orange</button>
-    <button onclick="go('yellow')">yellow</button>
-    <button onclick="go('limegreen')">green</button>
-    <button onclick="go('blue')">blue</button>
-    <button onclick="go('#d50eef')">purple</button>
-    <button onclick="go('hotpink')">pink</button>
-    <button onclick="go('black')">defaults</button>
-
+<footer> 
+    <button onclick="changeColour('red')" class="bccb red">red</button>
+    <button onclick="changeColour('orange')" class="bccb orange">orange</button>
+    <button onclick="changeColour('yellow')" class="bccb yellow">yellow</button>
+    <button onclick="changeColour('limegreen')" class="bccb limegreen">green</button>
+    <button onclick="changeColour('blue')" class="bccb blue">blue</button>
+    <button onclick="changeColour('purple')" class="bccb purple">purple</button>
+    <button onclick="changeColour('pink')" class="bccb pink">pink</button>
+    <button onclick="changeColour('black')" class="bccb white">defaults</button>
+  
   </footer>
 </html>
