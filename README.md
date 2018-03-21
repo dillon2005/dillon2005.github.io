@@ -1,2 +1,2 @@
 # Dillon
-You are <h1>not<h1> allowed to copy this code
+You are not allowed to copy this code
