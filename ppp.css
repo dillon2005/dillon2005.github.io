@@ -35,3 +35,32 @@
 .white {
 	background-color: white;
 }
+nav ul {
+list-style-type: none;
+background-color: gold;
+border: 2px solid Black;
+border-radius: 10px;
+font-family: sans-serif;
+font-weight: bold;
+padding: 16px;
+}
+
+nav ul li {
+display: inline;
+border-right: 2px solid black;
+padding-right: 8px;
+padding-left: 8px;
+}
+nav ul li:last-child {
+border-right: none;
+}
+nav ul li a {
+text-decoration: none;
+color: #111111;
+}
+nav li.selected{
+color: #606060;
+}
+nav ul li a:hover {
+text-decoration: underline;
+}
