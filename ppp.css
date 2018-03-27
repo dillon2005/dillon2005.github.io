@@ -35,15 +35,20 @@
 .white {
 	background-color: white;
 }
+
 nav ul {
 list-style-type: none;
 background-color: gold;
-border: 2px solid Black;
+border: 2px solid red;
 border-radius: 10px;
 font-family: sans-serif;
 font-weight: bold;
 padding: 16px;
+text-align: center;
 }
+
+
+
 
 nav ul li {
 display: inline;
@@ -63,4 +68,6 @@ color: #606060;
 }
 nav ul li a:hover {
 text-decoration: underline;
+}
+
 }
