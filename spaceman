@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html>
+<head>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116198452-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116198452-3');
+</script>
+
+  <title>Dillon</title>
+  <link rel=icon" href="/favicon.ico" type="image/x-icon"/>
+  <link type="text/css" rel="stylesheet" href="ppp.css"/>
+</head>
+<style>
+#heading { color: blue;
+}
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    ;background-image: url("digital_rainbow_11151.jpg");
+    
+    }
+
+</style>
+<body>
+
+<video width="320" height="240" controls>
+  <source src="game traler.mp4" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+<nav>
+           <ul> <li>
+	          <a href="index.html">home</a>
+               </li><li>
+                  <a href="snake.html">snake</a>
+              </li><li>
+                  <a href="game.html">run</a>
+              </li>
+				     <li>
+                  <a href="signin.html">Protected content</a>
+              </li></ul>
+            
+         </nav>
+<ul>
+
+</nav>
+</body>
+</html>
+
