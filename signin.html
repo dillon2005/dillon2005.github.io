@@ -1,282 +1,252 @@
-
-<DOCCTYPE html>
-<html>
-    <head>
-         <title>Sign in</title>
-         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-         <link type="text/css" rel="stylesheet" href="/ppp.css" />
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
     <style>
-         body {
-    ;background-image: url("digital_rainbow_11151.jpg");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText {
+            padding: 10px 30px;
+            color: white;
+            background-color: #333333;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #EEEEEE;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            width: 500px;
+            border: solid #AAAAAA 1px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 3px #AAAAAA;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+        #passArea {
+            padding: 20px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+        
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: green;
+        }
+        
+        #submitPass {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #E7E7E7;
+            border: solid gray 1px;
+            float: right;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
-<SCRIPT>
-/*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "qwertyuiop") {
-            alert('You Got it Right!');
-            window.open('tt.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-    /*function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "dillonrocks") {
-            alert('You Got it Right!');
-            window.open('home.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}*/
-</SCRIPT>
-<CENTER>
-<FORM>
-<input type="button" class="bccb red" value="click to go to my super cool site" onClick="passWord()"></br>
- <a href="/index.html"><input type="button" class="bccb limegreen" value="BACK!!!"></a>
-</FORM>
-</CENTER>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0"></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">This page is password protected.</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass">
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="notifyText">Sorry, please try again.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+    <script>
+        /*! srcdoc-polyfill - v0.1.1 - 2013-03-01
+        * http://github.com/jugglinmike/srcdoc-polyfill/
+        * Copyright (c) 2013 Mike Pennisi; Licensed MIT */
+        (function( window, document, undefined ) {
+	
+	        var idx, iframes;
+	        var _srcDoc = window.srcDoc;
+	        var isCompliant = !!("srcdoc" in document.createElement("iframe"));
+	        var implementations = {
+		        compliant: function( iframe, content ) {
+
+			        if (content) {
+				        iframe.setAttribute("srcdoc", content);
+			        }
+		        },
+		        legacy: function( iframe, content ) {
+
+			        var jsUrl;
+
+			        if (!iframe || !iframe.getAttribute) {
+				        return;
+			        }
+
+			        if (!content) {
+				        content = iframe.getAttribute("srcdoc");
+			        } else {
+				        iframe.setAttribute("srcdoc", content);
+			        }
+
+			        if (content) {
+				        // The value returned by a script-targeted URL will be used as
+				        // the iFrame's content. Create such a URL which returns the
+				        // iFrame element's `srcdoc` attribute.
+				        jsUrl = "javascript: window.frameElement.getAttribute('srcdoc');";
+
+				        iframe.setAttribute("src", jsUrl);
+
+				        // Explicitly set the iFrame's window.location for
+				        // compatability with IE9, which does not react to changes in
+				        // the `src` attribute when it is a `javascript:` URL, for
+				        // some reason
+				        if (iframe.contentWindow) {
+					        iframe.contentWindow.location = jsUrl;
+				        }
+			        }
+		        }
+	        };
+	        var srcDoc = window.srcDoc = {
+		        // Assume the best
+		        set: implementations.compliant,
+		        noConflict: function() {
+			        window.srcDoc = _srcDoc;
+			        return srcDoc;
+		        }
+	        };
+
+	        // If the browser supports srcdoc, no shimming is necessary
+	        if (isCompliant) {
+		        return;
+	        }
+
+	        srcDoc.set = implementations.legacy;
+
+	        // Automatically shim any iframes already present in the document
+	        iframes = document.getElementsByTagName("iframe");
+	        idx = iframes.length;
+
+	        while (idx--) {
+		        srcDoc.set( iframes[idx] );
+	        }
+
+        }( this, this.document ));
+    </script>
+    <script>
+        var pl = {"salt":"p+RljkyaSz122ew7uFG0zzBIiRfSTvi5nCGN5+cH7kE=","iv":"KI1QTHncynKAIuGUvekWkA==","data":"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"};
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+        }
+        
+        function doSubmit(evt) {
+            try {
+                var decrypted = decryptFile(CryptoJS.enc.Base64.parse(pl.data), passEl.value, CryptoJS.enc.Base64.parse(pl.salt), CryptoJS.enc.Base64.parse(pl.iv));
+                if (decrypted === "") throw "No data returned";
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                decrypted = decrypted.replace("<head>", "<head><base href=\".\" target=\"_top\">");
+                
+                srcDoc.set(contentFrame, decrypted);
+                
+                successEl.style.display = "inline";
+                passEl.disabled = true;
+                submitPass.disabled = true;
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+        
+        function decryptFile(contents, password, salt, iv) {
+            var _cp = CryptoJS.lib.CipherParams.create({
+                ciphertext: contents
+            });
+            var key = CryptoJS.PBKDF2(password, salt, { keySize: 256/32, iterations: 100 });
+            var decrypted = CryptoJS.AES.decrypt(_cp, key, {iv: iv});
+            
+            return decrypted.toString(CryptoJS.enc.Utf8);
+        }
+    </script>
+  </body>
 </html>
