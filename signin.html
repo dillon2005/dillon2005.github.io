@@ -90,7 +90,17 @@
             height: 100%;
         }
     </style>
-  </head>
+  <script>
+            //If there is no trailing slash after the path in the url, add it
+            if (window.location.pathname.endsWith('/') === false) {
+                var url = window.location.protocol + '//' +
+                        window.location.host +
+                        window.location.pathname + '/' +
+                        window.location.search;
+        
+                window.history.replaceState(null, document.title, url);
+            }
+        </script></head>
   <body>
     <iframe id="contentFrame" frameBorder="0"></iframe>
     <div id="dialogWrap">
@@ -190,7 +200,7 @@
         }( this, this.document ));
     </script>
     <script>
-        var pl = {"salt":"441p3GjzOabmRe1GxnRW+pTe6aC+n43VpNLLD/9L4Ts=","iv":"wOc7NM7nD91L7oyFF8sO2w==","data":"fqbLlws8gKNpGbepP5DMWs4/GDvm3Me2XXDtamSUXiAnFYLPaROACh6Z/r4B3bQWK6nPhQnqMI16ZIyHI4IGdcEy0IUrGYVMtC6krGj9U/5e9qG3pDhGvIAuOkbArzbkRcJOIpYFNeUrEc2la7jKpzV4enwK5eWUeLG+xlLJZA22aaSlv9bVf1o+kjcXCoJluhjibfO7aZS3Rir7I+iuBpgCEMv3J0HDWyz6paa6AVV0peeWIOQdLThVVooNo/h1LZnEeY+3pI4ULmGiGELOYzO2QboqNr/8GUGisvKkwqEn4W2ftZwWtRrFZoJiQPY4ZSIYZJGQzL3XJwC2zI/sjp9VrGUL/4UPa+QrODcxZzoQGYqQAtkfMcvAOR3AbSDssgHJ0uneYZEBygMomMyTtNnWFeOQeuGCBpjsBAlrfsAAPwz/Sk1to75gvy8Fvs7lvJ6nFNg/X4IKWWPHUXQkX18gGMAZv3reQBC8wdt4B0KTgcO09sMn+GqN+eaAIF+7bRU2CKHvWNk3V/4RJy8RrDbe7xa18ufbFcEjDfSe+x+GI9jvfDEh4uLt08C9ASQvMWbm1jFKv33nukCWZxVqdXoYGLN6UzsdLhg7uWAXB4nWA7CLSrt/Xy6dGOik5SDZmNKa9bHMOUcjsc9MQCGo2P/oinf6I0f8Ea019YfNEp1mKWHoynrKphN6QzuPPWmqJCctb+S+WR08VZp52OJxb1IAJRt5LEdrxGiZiHgy+NhcZXKbNA+7wUTuVlynxUPT2em8gyu5Eeg0zVNtbXE5Qv4IUQlxVJd94/1dwLQ272t6cbvijLY5kgVp/G0U8leEuGk1xPaJ2dUqsrWcOwBdfQIzYaBz1w0VcSq6bTqjRlbnpHPG74PmhOYhLmVjygSFNCiwybjQ8oB/TjfU3E3mrO2MIRpCx7Ijuk9PTCPQA3MVVeSy5GzhvCXjMwQsPuH8RjO8eIxVRLgptvAXSn/Dov1gauwW9Gi9Sq101HPXnmOtRjRxfDb4ZSjj8B1bGllzPRkdWcBbSzP3roY5+KpH93sjX7vbXUAQz0K1H5v0iT8fbmRi8zGf6sk73iEkg+F3yUXF8qDDDzgfZ1WF+TauKwE0Df85WPP1i/h1iAMLOeti+Hhh1PuYTQUHlcNwY8J8SVk8D7qT0lwDT+4Rv5zDNz3Uz589veIaIv8pT+szOPKdlv7RJ6M0Z5ov9wtpy978LqlEYIFq1aUWjkMdCJbN22CDsVLBx4ylamELUF++uHkqsXSrwevVBMsazc+LVxpzFCXhEosBLn8S+zVo6AquhQ1AGrIbf+IdvcpmLcFSQR+bwuklPOWGED/2bqdtUxOs2HuJYWZ6PBlnZUg5eIgAPSNXS4i44KSGL560liRilmaSlfmeXdBBLvBmdQXYuFe7otnuyRpIKYgeCTjcEAopmPtwBVyOLuQ3Iy/A5/2F+6rHEYuF6Wc/53RySEOWBdHbq2aBpzocnsnoYsHlJxy11LjZp1oSF5UxtZwBJiMprAc8CyPN+iuy8UicsnAFyoiG+QTMeXUqNDajVQ1uTpIvjNqHwFaP+HMr+b27ggmCbClwqXItzdJuQSMKE/M/R2xc/+5avPS7+IHVVv0hP1MNWsv/sZxzkfKA2PckrOTCtGNczAwjMXJi1IYnTsRX7PxX6blAiSlf1Aq6KZXqoiSJJI509hYAtJ+vuMidwWEU/HB5qcDVT8XbLDfSEAUUyK2oTTOCngXq5KfhjDl6y/vwr0713lUvmV5c2tIVQ6wpPJAGaMYj25ZHGrANoiNWaH8QSP0NoIsmBlZCEPgbAYpwQTxcAwzCnCYUnW71uoDTaAwSDgEMDl77YL3hUief/ykCGcv5EPrKoeDEdlaPPKXORAxTRAFBy6bgluM1JSqry7XNoKt9lwN2NLaVu9849yPdoNZQuI82OI7Hg1UUXDfZqEaIMOAqWezfHv7VSlyYn8BWH1cIHDQDpmQySy3etrXQCRMRpFYDDuZmHrnSdPnaeLbDZjGQdjNu/Gu+LC4sOO6Jq7cXK96r5Okx4R9TOVRpgz3jBFvUuHi30UR8uWvvJA=="};
+        var pl = {"salt":"2tM6Is7s42nMZQQ6OvzWfzQ/kXSnlvWaIs65Xl8NM7A=","iv":"dEDnjf2C3EYKbFj6G9X33g==","data":"aBqpZVFpu52jBJtP1qqTmT26gO8qCjyMO5Jqt/3jEVwv9+BiIkmh7A49+BxS9aDt/Kn0xd3kJlkL4/9X8OAe9+5xGjsYM7RphcFzhR6DwJFh4U7VqwYZI4z+xOnWV2307ftJPH9F+VPftCJIPu/kkjyiNavwru9lGQkAY78b/XpNT71sDKc3u+l8dFZwzrTat3T5bkZGtR8mxEs8jeHvwJqgIdEYADpbeX6ppOJzMG47WLUqjrG0RKh4mVH8ERgVaAXF5dBeEmu9VlEUkpGIxLeRmJ1w2B908G1sSmRH0SrsppDkCDlsVGewDBAIueoBA/6m3D2D9u4vUifDPid025RHkCFRhFTf6dWF4bM8xh2TiN1ktfh6AmIa8mjXDJeraXm+SyTIjA2lHJDOjWO+hdQIhIHFvvYjOc43X4QkYoCBnYPmppJAlJlL3Nbqp4klpnuH8pglLl76cLRzioIsXxCvAMxlaAvNi9h+M802++azpcetIX/cFaYSs1gRPigohVxA+latBJn86otHQFAj9QnZ6nY1U5Y1/OGZ9JGjoXkdpRYHOBd44tnlnqtoegvnJwIkCVlk5KVUulCIJk0IPEqB1z0OjTM8TvqO2wBRB2KA/27PZQVCG7W+uriOVCRhxxHgDrV3WLbsNRnjf7mFRCYfQz5kvp/LU4a3a8UP4xao9iI5pQCSTqUUicKoDL2dj/mWeS9xRBanyzX0LF8La1CBkaB6TL8AmGrBBsS4EymQ+lzUYHKkxICcONoeulKwh+TYvb7p5x0+U7SE/lxciU9mgKyiG4GqXgO0bEQVfGYJ8KWHLJ6nMAuyeEf/5fHO5DrjxIZRy7jJapZ/ZIfVbbQbSunKpN/OYYpbDpvHS+Ex7U37GjXoYwIfataEd0v5d3fpTgTkjOyYCq+8IGMUjy3Ie6qedJKTKitrKXjGtwbfsqJj4gymCLO7KYzN3c5TmVp3B9mITfn1mIUUCSeAWECjvfun+VmnfPEDqt6kr6PgRIKyW503E9tgG/gXOPtebdHHzyNBpkwa927oxUp7sw=="};
         
         var submitPass = document.getElementById('submitPass');
         var passEl = document.getElementById('pass');
