@@ -1,5 +1,4 @@
 
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 .bccb {
 	padding: 4px;
 	border-radius: 3px;
@@ -43,7 +42,7 @@ list-style-type: none;
 background-color: gold;
 border: 2px solid red;
 border-radius: 10px;
-font-family: 'Pacifico', cursive;
+font-family: sans-serif;
 font-weight: bold;
 padding: 16px;
 text-align: center;
