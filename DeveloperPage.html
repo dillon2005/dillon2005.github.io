@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="Style.css"/>
+  <link rel=icon" href="/favicon.ico" type="image/x-icon"/>
+  <title>Developer's Page</title>
+
+<!-- Navagation Bar -->
+
+<ul>
+  <li><a href="\Home.html">Home</a></li>
+  <li><a href="\About.html">About</a></li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Games</a>
+    <div class="dropdown-content">
+      <a href="\snake.html">Snake</a>
+      <a href="\Run.html">Run</a>
+      <a href="\Car Simulator.html">Car Simulator</a>
+    </div>
+
+    <li><a href="http://dhunt.fun/">Developer's Page</a></li>
+    <li><a href="http://dhunt.fun/">My Trailer</a></li>
+  </li>
+</ul>
+
+<!-- End Of Navagation Bar -->
+
+</head>
+<body>
+<style>
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: red;
+    text-align: center;
+    justify-content: center;
+    font-size: 100%;
+  }
+ .button1:hover {
+    background-color: green;
+    color: white;
+}
+  </style>
+<script>
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var ms = today.getMilliseconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    ms = checkTime(ms);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s + ":" + ms;
+    var t = setTimeout(startTime, 1);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+<body onload="startTime()">
+
+<h1><div id="txt"></div><h1>
+</body>
+</html>
