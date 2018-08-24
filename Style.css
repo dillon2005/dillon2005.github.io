@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 ul {
     list-style-type: none;
     margin: 0;
@@ -57,7 +58,7 @@ li.dropdown {
  {
     height: 100%;
     margin: 0;
-    font-family: 'Pacifico', cursive;                              
+    font-family: 'Nunito', sans-serif;                            
 }
 body 
 {
