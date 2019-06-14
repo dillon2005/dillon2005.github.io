@@ -2,8 +2,7 @@ body {
     color: #f2f2f2;
     font-size: 12px;
     font-family: 'Metal Mania', cursive;
-    background-colour: black;
- 
+    background-image: url(Particles_Moving.gif)
 }
 * {box-sizing:border-box}
 
