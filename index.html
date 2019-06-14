@@ -1,12 +1,118 @@
-<!DOCTYPE html>
 <html>
-   <head>
-      <title>Mike's Music</title>
-      <meta http-equiv = "refresh" content = "3; url = https://www.dropbox.com/sh/3uz7nym51a7vww4/AABhO99c_AXWGIp4PH8VSWNka?dl=0" />
-   </head>
-   <body>
-      <h1>Mike Hunt - Peering Back From The Edge</h1>
-      <p>Redirecting to dropbox</p>
-      <p>Thanks For Listening</p>
-   </body>
+    <head>
+<title>Photos</title>
+<link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="Image1.JPG" style="width:100%">
+    <div class="text">Reflection At The Everglades</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image2.jpg" style="width:100%">
+    <div class="text">Sunset At Boren Point</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image3.jpg" style="width:100%">
+    <div class="text">Kayak At Kinwa Information Center</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="Image4.JPG" style="width:100%">
+    <div class="text">Lake Como</div>
+  </div>
+      <div class="mySlides fade">
+    <img src="Image6.JPG" style="width:100%">
+    <div class="text">Kyaking At The Everglades</div>
+  </div>
+      <div class="mySlides fade">
+    <img src="Image7.JPG" style="width:100%">
+    <div class="text">Vew From Campsite</div>
+  </div>
+      <div class="mySlides fade">
+    <img src="Image9.JPG" style="width:100%">
+    <div class="text">Boren Pont</div>
+  </div>
+      <div class="mySlides fade">
+    <img src="Image10.JPG" style="width:100%">
+    <div class="text">Underwater</div>
+  </div>
+     <div class="mySlides fade">
+    <img src="Image11.JPG" style="width:100%">
+    <div class="text">Green Sea Turtle</div>
+  </div>
+         <div class="mySlides fade">
+    <img src="Image13.JPG" style="width:100%">
+    <div class="text">Family Photo</div>
+  </div>
+         <div class="mySlides fade">
+    <img src="Image14.JPG" style="width:100%">
+    <div class="text">Green Sea Turtle</div>
+  </div>
+         <div class="mySlides fade">
+    <img src="Image15.JPG" style="width:100%">
+    <div class="text">Moorish Idol</div>
+  </div>
+         <div class="mySlides fade">
+    <img src="Image17.JPG" style="width:100%">
+    <div class="text">Green Sea Turtle Close Up</div>
+  </div>
+          <div class="mySlides fade">
+    <img src="Image20.JPG" style="width:100%">
+    <div class="text">Fish Close Up</div>
+  </div>
+          <div class="mySlides fade">
+    <img src="Image22.JPG" style="width:100%">
+    <div class="text">Sunset</div>
+  </div>
+      <div class="mySlides fade">
+    <img src="Image29.JPG" style="width:100%">
+    <div class="text">Lady Elliot</div>
+  </div>
+                  <div class="mySlides fade">
+    <img src="Image30.JPG" style="width:100%">
+    <div class="text">Sun</div>
+  </div>
+                  <div class="mySlides fade">
+    <img src="Image31.JPG" style="width:100%">
+    <div class="text">Nemo</div>
+  </div>
+    <h1></br>This is the collection of my best images, feel free to download them.</br>
+    At Year 8 Camp:</br>
+    <img src="Image1.JPG" style="width:33.33%"><img src="Image2.JPG" style="width:33.33%"><img src="Image3.JPG" style="width:33.33%"></br>
+    <img src="Image4.JPG" style="width:33.33%"><img src="Image5.JPG" style="width:33.33%"><img src="Image6.JPG" style="width:33.33%"></br>
+    <img src="Image25.JPG" style="width:33.33%"><img src="Image27.JPG" style="width:33.33%"><img src="Image28.JPG" style="width:33.33%"></br>
+    <img src="Image7.JPG" style="width:33.33%"><img src="Image8.JPG" style="width:33.33%"><img src="Image9.JPG" style="width:33.33%"></br>Lady Elliot Island:</br>
+    <img src="Image10.JPG" style="width:33.33%"><img src="Image11.JPG" style="width:33.33%"><img src="Image12.JPG" style="width:33.33%"></br>
+    <img src="Image13.JPG" style="width:33.33%"><img src="Image14.JPG" style="width:33.33%"><img src="Image15.JPG" style="width:33.33%"></br>
+    <img src="Image16.JPG" style="width:33.33%"><img src="Image17.JPG" style="width:33.33%"><img src="Image18.JPG" style="width:33.33%"></br>
+    <img src="Image19.JPG" style="width:33.33%"><img src="Image20.JPG" style="width:33.33%"><img src="Image21.JPG" style="width:33.33%"></br>
+    <img src="Image22.JPG" style="width:33.33%"><img src="Image23.JPG" style="width:33.33%"><img src="Image24.JPG" style="width:33.33%"></br>
+    <img src="Image29.JPG" style="width:33.33%"><img src="Image30.JPG" style="width:33.33%"><img src="Image31.JPG" style="width:33.33%"></br>
+
+
+</h1>
+    </body>
+    <script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 2000);
+}
+    </script>
 </html>
